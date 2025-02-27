@@ -20,21 +20,21 @@ namespace JogoXadrez.Entities.Elementos_Jogo.Camada_Jogo_Xadrez
         {
             Peca p = Tabuleiro.indentificarPeca(pos);
 
-            return p is Rei && p.QtdMovimentos == 0 && p != null && p.Cor == Cor;
+            return p is Torre && p.QtdMovimentos == 0 && p != null && p.Cor == Cor;
         }
 
         //Aqui definimos os movimentos possiveis, mas a movimentação de fato, está a cargo da PartidaXadrez
         public override bool[,] movimentoPeca()
         {
             bool[,] mat = new bool[Tabuleiro.Linhas, Tabuleiro.Colunas];
-            Posicao pos = new Posicao(0,0);
+            Posicao pos = new Posicao(0, 0);
 
             //Acima
             //1 - Definimos a Posição que deseja mover a peça
             //2 - Verifica se posição é válida e se é possivel mover para aquela posição
             //3 - Caso sim, coloca true na matriz que representa posições possiveis
             pos.definirValores(Posicao.Linha - 1, Posicao.Coluna);
-            if(Tabuleiro.verifyPosition(pos) && podeMover(pos))
+            if (Tabuleiro.verifyPosition(pos) && podeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
             }
@@ -47,7 +47,7 @@ namespace JogoXadrez.Entities.Elementos_Jogo.Camada_Jogo_Xadrez
             }
 
             //direita
-            pos.definirValores(Posicao.Linha , Posicao.Coluna + 1);
+            pos.definirValores(Posicao.Linha, Posicao.Coluna + 1);
             if (Tabuleiro.verifyPosition(pos) && podeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
@@ -68,7 +68,7 @@ namespace JogoXadrez.Entities.Elementos_Jogo.Camada_Jogo_Xadrez
             }
 
             //
-            pos.definirValores(Posicao.Linha +1 , Posicao.Coluna - 1);
+            pos.definirValores(Posicao.Linha + 1, Posicao.Coluna - 1);
             if (Tabuleiro.verifyPosition(pos) && podeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
@@ -88,26 +88,24 @@ namespace JogoXadrez.Entities.Elementos_Jogo.Camada_Jogo_Xadrez
                 mat[pos.Linha, pos.Coluna] = true;
             }
 
-            //Roque pequena
-            if(partida.Xeque != true && QtdMovimentos == 0)
+            //Roque 
+            if (!partida.Xeque && QtdMovimentos == 0)
             {
+                //Roque Pequeno
                 Posicao posT1 = new Posicao(Posicao.Linha, Posicao.Coluna + 3);
-                if(testeRoque(posT1))
+                if (testeRoque(posT1))
                 {
                     Posicao p1 = new Posicao(Posicao.Linha, Posicao.Coluna + 1);
                     Posicao p2 = new Posicao(Posicao.Linha, Posicao.Coluna + 2);
-                    if(Tabuleiro.indentificarPeca(p1) == null && Tabuleiro.indentificarPeca(p2) ==null)
+                    if (Tabuleiro.indentificarPeca(p1) == null && Tabuleiro.indentificarPeca(p2) == null)
                     {
                         mat[Posicao.Linha, Posicao.Coluna + 2] = true;
                     }
                 }
-            }
 
-            //Roque Grande
-            if (partida.Xeque != true && QtdMovimentos == 0)
-            {
-                Posicao posT1 = new Posicao(Posicao.Linha, Posicao.Coluna - 4);
-                if (testeRoque(posT1))
+                //Roque Grande
+                Posicao posT2 = new Posicao(Posicao.Linha, Posicao.Coluna - 4);
+                if (testeRoque(posT2))
                 {
                     Posicao p1 = new Posicao(Posicao.Linha, Posicao.Coluna - 1);
                     Posicao p2 = new Posicao(Posicao.Linha, Posicao.Coluna - 2);
@@ -117,6 +115,7 @@ namespace JogoXadrez.Entities.Elementos_Jogo.Camada_Jogo_Xadrez
                         mat[Posicao.Linha, Posicao.Coluna - 2] = true;
                     }
                 }
+
             }
 
             return mat;

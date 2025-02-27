@@ -53,6 +53,28 @@ namespace JogoXadrez.Entities.Elementos_Jogo.Camada_Jogo_Xadrez
             {
                 capturarPeca(pecaCapturada);
             }
+
+            //Roque pequeno
+            if(p is Rei && destino.Coluna == origem.Coluna + 2)
+            {
+                Posicao origemTorre = new Posicao(origem.Linha, origem.Coluna + 3);
+                Posicao destinoTorre = new Posicao(origem.Linha, origem.Coluna + 1);
+
+                Peca t = Tab.retirarPeca(origemTorre);
+                t.incrementarMovimento();
+                Tab.addPeca(t, destinoTorre);
+            }
+
+            //Roque Grande
+            if (p is Rei && destino.Coluna == origem.Coluna - 2)
+            {
+                Posicao origemTorre = new Posicao(origem.Linha, origem.Coluna - 4);
+                Posicao destinoTorre = new Posicao(origem.Linha, origem.Coluna - 1);
+
+                Peca t = Tab.retirarPeca(origemTorre);
+                t.incrementarMovimento();
+                Tab.addPeca(t, destinoTorre);
+            }
             return pecaCapturada;
         }
 
@@ -142,6 +164,7 @@ namespace JogoXadrez.Entities.Elementos_Jogo.Camada_Jogo_Xadrez
 
         private void dezfazMovimento(Peca pecaCapturada, Posicao origem, Posicao destino)
         {
+
             Peca p = Tab.retirarPeca(destino);
             p.decrementarMovimento();
             if (pecaCapturada != null)
@@ -149,7 +172,32 @@ namespace JogoXadrez.Entities.Elementos_Jogo.Camada_Jogo_Xadrez
                 Tab.addPeca(pecaCapturada, destino);
                 pecasCapturadas.Remove(pecaCapturada);
             }
+
             Tab.addPeca(p, origem);
+
+            //Roque pequeno
+            if (p is Rei && destino.Coluna == origem.Coluna + 2)
+            {
+                Posicao destinoTorre = new Posicao(origem.Linha, origem.Coluna + 1);
+                Posicao origemTorre = new Posicao(origem.Linha, origem.Coluna + 3);
+                Peca torre = Tab.retirarPeca(destinoTorre);
+                Tab.addPeca(torre, origemTorre);
+                torre.decrementarMovimento();
+            }
+            Tab.addPeca(p, origem);
+
+            //Roque Grande
+            if (p is Rei && destino.Coluna == origem.Coluna - 2)
+            {
+                Posicao destinoTorre = new Posicao(origem.Linha, origem.Coluna  -1);
+                Posicao origemTorre = new Posicao(origem.Linha, origem.Coluna - 4);
+                Peca torre = Tab.retirarPeca(destinoTorre);
+                Tab.addPeca(torre, origemTorre);
+                torre.decrementarMovimento();
+            }
+            
+
+
         }
         public void mudarJogador()
         {

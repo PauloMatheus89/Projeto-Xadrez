@@ -16,6 +16,13 @@ namespace JogoXadrez.Entities.Elementos_Jogo.Camada_Jogo_Xadrez
             this.partida = partida;
         }
 
+        public bool testeRoque(Posicao pos)
+        {
+            Peca p = Tabuleiro.indentificarPeca(pos);
+
+            return p is Rei && p.QtdMovimentos == 0 && p != null && p.Cor == Cor;
+        }
+
         //Aqui definimos os movimentos possiveis, mas a movimentação de fato, está a cargo da PartidaXadrez
         public override bool[,] movimentoPeca()
         {
@@ -79,6 +86,37 @@ namespace JogoXadrez.Entities.Elementos_Jogo.Camada_Jogo_Xadrez
             if (Tabuleiro.verifyPosition(pos) && podeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
+            }
+
+            //Roque pequena
+            if(partida.Xeque != true && QtdMovimentos == 0)
+            {
+                Posicao posT1 = new Posicao(Posicao.Linha, Posicao.Coluna + 3);
+                if(testeRoque(posT1))
+                {
+                    Posicao p1 = new Posicao(Posicao.Linha, Posicao.Coluna + 1);
+                    Posicao p2 = new Posicao(Posicao.Linha, Posicao.Coluna + 2);
+                    if(Tabuleiro.indentificarPeca(p1) == null && Tabuleiro.indentificarPeca(p2) ==null)
+                    {
+                        mat[Posicao.Linha, Posicao.Coluna + 2] = true;
+                    }
+                }
+            }
+
+            //Roque Grande
+            if (partida.Xeque != true && QtdMovimentos == 0)
+            {
+                Posicao posT1 = new Posicao(Posicao.Linha, Posicao.Coluna - 4);
+                if (testeRoque(posT1))
+                {
+                    Posicao p1 = new Posicao(Posicao.Linha, Posicao.Coluna - 1);
+                    Posicao p2 = new Posicao(Posicao.Linha, Posicao.Coluna - 2);
+                    Posicao p3 = new Posicao(Posicao.Linha, Posicao.Coluna - 3);
+                    if (Tabuleiro.indentificarPeca(p1) == null && Tabuleiro.indentificarPeca(p2) == null && Tabuleiro.indentificarPeca(p3) == null)
+                    {
+                        mat[Posicao.Linha, Posicao.Coluna - 2] = true;
+                    }
+                }
             }
 
             return mat;

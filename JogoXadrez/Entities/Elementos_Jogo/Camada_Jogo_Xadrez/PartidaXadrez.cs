@@ -100,12 +100,22 @@ namespace JogoXadrez.Entities.Elementos_Jogo.Camada_Jogo_Xadrez
 
             if(existeXeque(adversario(JogadorAtual)))
             {
-                Xeque = true;
+                if (xequeMate(PecasEmJogo(adversario(JogadorAtual))))
+                {
+                    Finalizada = true;
+                }
+                else
+                {
+                    Xeque = true;
+                }
+
             }
             else
             {
                 Xeque = false;
             }
+
+            
 
             //2 - Passa o Turno
             Turno++;
@@ -174,7 +184,14 @@ namespace JogoXadrez.Entities.Elementos_Jogo.Camada_Jogo_Xadrez
             colocarNovaPeca('f', 1, new Bispo(Tab, Cor.Branco));
             colocarNovaPeca('g', 1, new Cavalo(Tab, Cor.Branco));
             colocarNovaPeca('h', 1, new Torre(Tab, Cor.Branco));
-            
+            colocarNovaPeca('a', 2, new Peao(Tab, Cor.Branco, this));
+            colocarNovaPeca('b', 2, new Peao(Tab, Cor.Branco, this));
+            colocarNovaPeca('c', 2, new Peao(Tab, Cor.Branco, this));
+            colocarNovaPeca('d', 2, new Peao(Tab, Cor.Branco, this));
+            colocarNovaPeca('e', 2, new Peao(Tab, Cor.Branco, this));
+            colocarNovaPeca('f', 2, new Peao(Tab, Cor.Branco, this));
+            colocarNovaPeca('g', 2, new Peao(Tab, Cor.Branco, this));
+            colocarNovaPeca('h', 2, new Peao(Tab, Cor.Branco, this));
 
             colocarNovaPeca('a', 8, new Torre(Tab, Cor.Preto));
             colocarNovaPeca('b', 8, new Cavalo(Tab, Cor.Preto));
@@ -184,7 +201,16 @@ namespace JogoXadrez.Entities.Elementos_Jogo.Camada_Jogo_Xadrez
             colocarNovaPeca('f', 8, new Bispo(Tab, Cor.Preto));
             colocarNovaPeca('g', 8, new Cavalo(Tab, Cor.Preto));
             colocarNovaPeca('h', 8, new Torre(Tab, Cor.Preto));
-            
+            colocarNovaPeca('a', 7, new Peao(Tab, Cor.Preto, this));
+            colocarNovaPeca('b', 7, new Peao(Tab, Cor.Preto, this));
+            colocarNovaPeca('c', 7, new Peao(Tab, Cor.Preto, this));
+            colocarNovaPeca('d', 7, new Peao(Tab, Cor.Preto, this));
+            colocarNovaPeca('e', 7, new Peao(Tab, Cor.Preto, this));
+            colocarNovaPeca('f', 7, new Peao(Tab, Cor.Preto, this));
+            colocarNovaPeca('g', 7, new Peao(Tab, Cor.Preto, this));
+            colocarNovaPeca('h', 7, new Peao(Tab, Cor.Preto, this));
+
+
 
         }
 
@@ -293,6 +319,34 @@ namespace JogoXadrez.Entities.Elementos_Jogo.Camada_Jogo_Xadrez
             }
 
             return false;
+        }
+
+        private bool xequeMate(HashSet<Peca> pecasAliadas)
+        {
+            foreach(Peca peca in pecasAliadas)
+            {
+                bool[,] mat = peca.movimentoPeca();
+                for(int i =0; i<Tab.Linhas;i++)
+                {
+                    for(int c = 0; c<Tab.Colunas; c++)
+                    {
+                        if (mat[i,c] == true)
+                        {
+                            Posicao origem = peca.Posicao;
+                            Posicao destino = new Posicao(i, c);
+                            Peca Captura = executaMovimento(origem, destino);
+                            bool testeXeque = existeXeque(adversario(JogadorAtual));
+                            dezfazMovimento(Captura, origem, destino);
+                            if(!testeXeque)
+                            { 
+                                return false;
+                            }
+                        }
+                    }
+                }
+               
+            }
+            return true;
         }
 
         /*

@@ -84,6 +84,7 @@ namespace JogoXadrez
                         Console.BackgroundColor = fundoOriginal;
                     }
                     imprimirPeca(tab.indentificarPeca(i, c));
+                    Console.BackgroundColor = fundoOriginal;
                 }
                 Console.WriteLine();
             }
@@ -92,6 +93,7 @@ namespace JogoXadrez
             {
                 Console.Write(" " + i);
             }
+            Console.BackgroundColor = fundoOriginal;
         }
 
 

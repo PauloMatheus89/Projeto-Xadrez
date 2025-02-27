@@ -12,3 +12,4 @@ C:\Users\joaog\source\repos\Curso C#\Códigos\Projeto Jogo De Xadrez\JogoXadrez\
 C:\Users\joaog\source\repos\Curso C#\Códigos\Projeto Jogo De Xadrez\JogoXadrez\JogoXadrez\obj\Debug\net8.0\JogoXadrez.pdb
 C:\Users\joaog\source\repos\Curso C#\Códigos\Projeto Jogo De Xadrez\JogoXadrez\JogoXadrez\obj\Debug\net8.0\JogoXadrez.genruntimeconfig.cache
 C:\Users\joaog\source\repos\Curso C#\Códigos\Projeto Jogo De Xadrez\JogoXadrez\JogoXadrez\obj\Debug\net8.0\ref\JogoXadrez.dll
+C:\Users\joaog\source\repos\Curso C#\Códigos\Projeto Jogo De Xadrez\JogoXadrez\JogoXadrez\obj\Debug\net8.0\JogoXadrez.sourcelink.json

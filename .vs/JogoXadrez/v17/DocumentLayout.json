@@ -1,0 +1,233 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\joaog\\source\\repos\\Curso C#\\C\u00F3digos\\Projeto Jogo De Xadrez\\JogoXadrez\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BE068296-22A0-4F42-BE68-9387ABB058BC}|JogoXadrez\\JogoXadrez.csproj|c:\\users\\joaog\\source\\repos\\curso c#\\c\u00F3digos\\projeto jogo de xadrez\\jogoxadrez\\jogoxadrez\\tela.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE068296-22A0-4F42-BE68-9387ABB058BC}|JogoXadrez\\JogoXadrez.csproj|solutionrelative:jogoxadrez\\tela.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE068296-22A0-4F42-BE68-9387ABB058BC}|JogoXadrez\\JogoXadrez.csproj|c:\\users\\joaog\\source\\repos\\curso c#\\c\u00F3digos\\projeto jogo de xadrez\\jogoxadrez\\jogoxadrez\\entities\\elementos_jogo\\camada_jogo_xadrez\\partidaxadrez.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE068296-22A0-4F42-BE68-9387ABB058BC}|JogoXadrez\\JogoXadrez.csproj|solutionrelative:jogoxadrez\\entities\\elementos_jogo\\camada_jogo_xadrez\\partidaxadrez.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE068296-22A0-4F42-BE68-9387ABB058BC}|JogoXadrez\\JogoXadrez.csproj|c:\\users\\joaog\\source\\repos\\curso c#\\c\u00F3digos\\projeto jogo de xadrez\\jogoxadrez\\jogoxadrez\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE068296-22A0-4F42-BE68-9387ABB058BC}|JogoXadrez\\JogoXadrez.csproj|solutionrelative:jogoxadrez\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE068296-22A0-4F42-BE68-9387ABB058BC}|JogoXadrez\\JogoXadrez.csproj|c:\\users\\joaog\\source\\repos\\curso c#\\c\u00F3digos\\projeto jogo de xadrez\\jogoxadrez\\jogoxadrez\\entities\\elementos_jogo\\camada_tabuleiro\\tabuleiro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE068296-22A0-4F42-BE68-9387ABB058BC}|JogoXadrez\\JogoXadrez.csproj|solutionrelative:jogoxadrez\\entities\\elementos_jogo\\camada_tabuleiro\\tabuleiro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE068296-22A0-4F42-BE68-9387ABB058BC}|JogoXadrez\\JogoXadrez.csproj|c:\\users\\joaog\\source\\repos\\curso c#\\c\u00F3digos\\projeto jogo de xadrez\\jogoxadrez\\jogoxadrez\\entities\\elementos_jogo\\camada_tabuleiro\\peca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE068296-22A0-4F42-BE68-9387ABB058BC}|JogoXadrez\\JogoXadrez.csproj|solutionrelative:jogoxadrez\\entities\\elementos_jogo\\camada_tabuleiro\\peca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE068296-22A0-4F42-BE68-9387ABB058BC}|JogoXadrez\\JogoXadrez.csproj|c:\\users\\joaog\\source\\repos\\curso c#\\c\u00F3digos\\projeto jogo de xadrez\\jogoxadrez\\jogoxadrez\\entities\\elementos_jogo\\camada_jogo_xadrez\\peao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE068296-22A0-4F42-BE68-9387ABB058BC}|JogoXadrez\\JogoXadrez.csproj|solutionrelative:jogoxadrez\\entities\\elementos_jogo\\camada_jogo_xadrez\\peao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE068296-22A0-4F42-BE68-9387ABB058BC}|JogoXadrez\\JogoXadrez.csproj|c:\\users\\joaog\\source\\repos\\curso c#\\c\u00F3digos\\projeto jogo de xadrez\\jogoxadrez\\jogoxadrez\\entities\\elementos_jogo\\camada_tabuleiro\\posicao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE068296-22A0-4F42-BE68-9387ABB058BC}|JogoXadrez\\JogoXadrez.csproj|solutionrelative:jogoxadrez\\entities\\elementos_jogo\\camada_tabuleiro\\posicao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE068296-22A0-4F42-BE68-9387ABB058BC}|JogoXadrez\\JogoXadrez.csproj|c:\\users\\joaog\\source\\repos\\curso c#\\c\u00F3digos\\projeto jogo de xadrez\\jogoxadrez\\jogoxadrez\\entities\\elementos_jogo\\camada_jogo_xadrez\\torre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE068296-22A0-4F42-BE68-9387ABB058BC}|JogoXadrez\\JogoXadrez.csproj|solutionrelative:jogoxadrez\\entities\\elementos_jogo\\camada_jogo_xadrez\\torre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE068296-22A0-4F42-BE68-9387ABB058BC}|JogoXadrez\\JogoXadrez.csproj|c:\\users\\joaog\\source\\repos\\curso c#\\c\u00F3digos\\projeto jogo de xadrez\\jogoxadrez\\jogoxadrez\\entities\\elementos_jogo\\camada_jogo_xadrez\\rei.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE068296-22A0-4F42-BE68-9387ABB058BC}|JogoXadrez\\JogoXadrez.csproj|solutionrelative:jogoxadrez\\entities\\elementos_jogo\\camada_jogo_xadrez\\rei.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE068296-22A0-4F42-BE68-9387ABB058BC}|JogoXadrez\\JogoXadrez.csproj|c:\\users\\joaog\\source\\repos\\curso c#\\c\u00F3digos\\projeto jogo de xadrez\\jogoxadrez\\jogoxadrez\\entities\\elementos_jogo\\camada_jogo_xadrez\\dama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE068296-22A0-4F42-BE68-9387ABB058BC}|JogoXadrez\\JogoXadrez.csproj|solutionrelative:jogoxadrez\\entities\\elementos_jogo\\camada_jogo_xadrez\\dama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE068296-22A0-4F42-BE68-9387ABB058BC}|JogoXadrez\\JogoXadrez.csproj|c:\\users\\joaog\\source\\repos\\curso c#\\c\u00F3digos\\projeto jogo de xadrez\\jogoxadrez\\jogoxadrez\\entities\\elementos_jogo\\camada_jogo_xadrez\\cavalo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE068296-22A0-4F42-BE68-9387ABB058BC}|JogoXadrez\\JogoXadrez.csproj|solutionrelative:jogoxadrez\\entities\\elementos_jogo\\camada_jogo_xadrez\\cavalo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE068296-22A0-4F42-BE68-9387ABB058BC}|JogoXadrez\\JogoXadrez.csproj|c:\\users\\joaog\\source\\repos\\curso c#\\c\u00F3digos\\projeto jogo de xadrez\\jogoxadrez\\jogoxadrez\\entities\\elementos_jogo\\camada_jogo_xadrez\\bispo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE068296-22A0-4F42-BE68-9387ABB058BC}|JogoXadrez\\JogoXadrez.csproj|solutionrelative:jogoxadrez\\entities\\elementos_jogo\\camada_jogo_xadrez\\bispo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE068296-22A0-4F42-BE68-9387ABB058BC}|JogoXadrez\\JogoXadrez.csproj|c:\\users\\joaog\\source\\repos\\curso c#\\c\u00F3digos\\projeto jogo de xadrez\\jogoxadrez\\jogoxadrez\\entities\\elementos_jogo\\camada_jogo_xadrez\\posicaoxadrez.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE068296-22A0-4F42-BE68-9387ABB058BC}|JogoXadrez\\JogoXadrez.csproj|solutionrelative:jogoxadrez\\entities\\elementos_jogo\\camada_jogo_xadrez\\posicaoxadrez.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Tela.cs",
+              "DocumentMoniker": "C:\\Users\\joaog\\source\\repos\\Curso C#\\C\u00F3digos\\Projeto Jogo De Xadrez\\JogoXadrez\\JogoXadrez\\Tela.cs",
+              "RelativeDocumentMoniker": "JogoXadrez\\Tela.cs",
+              "ToolTip": "C:\\Users\\joaog\\source\\repos\\Curso C#\\C\u00F3digos\\Projeto Jogo De Xadrez\\JogoXadrez\\JogoXadrez\\Tela.cs",
+              "RelativeToolTip": "JogoXadrez\\Tela.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T13:18:11.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PartidaXadrez.cs",
+              "DocumentMoniker": "C:\\Users\\joaog\\source\\repos\\Curso C#\\C\u00F3digos\\Projeto Jogo De Xadrez\\JogoXadrez\\JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Jogo_Xadrez\\PartidaXadrez.cs",
+              "RelativeDocumentMoniker": "JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Jogo_Xadrez\\PartidaXadrez.cs",
+              "ToolTip": "C:\\Users\\joaog\\source\\repos\\Curso C#\\C\u00F3digos\\Projeto Jogo De Xadrez\\JogoXadrez\\JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Jogo_Xadrez\\PartidaXadrez.cs",
+              "RelativeToolTip": "JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Jogo_Xadrez\\PartidaXadrez.cs",
+              "ViewState": "AgIAABIBAAAAAAAAAAAIwC0BAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T19:11:48.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Torre.cs",
+              "DocumentMoniker": "C:\\Users\\joaog\\source\\repos\\Curso C#\\C\u00F3digos\\Projeto Jogo De Xadrez\\JogoXadrez\\JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Jogo_Xadrez\\Torre.cs",
+              "RelativeDocumentMoniker": "JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Jogo_Xadrez\\Torre.cs",
+              "ToolTip": "C:\\Users\\joaog\\source\\repos\\Curso C#\\C\u00F3digos\\Projeto Jogo De Xadrez\\JogoXadrez\\JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Jogo_Xadrez\\Torre.cs",
+              "RelativeToolTip": "JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Jogo_Xadrez\\Torre.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAYwCwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T15:48:47.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Dama.cs",
+              "DocumentMoniker": "C:\\Users\\joaog\\source\\repos\\Curso C#\\C\u00F3digos\\Projeto Jogo De Xadrez\\JogoXadrez\\JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Jogo_Xadrez\\Dama.cs",
+              "RelativeDocumentMoniker": "JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Jogo_Xadrez\\Dama.cs",
+              "ToolTip": "C:\\Users\\joaog\\source\\repos\\Curso C#\\C\u00F3digos\\Projeto Jogo De Xadrez\\JogoXadrez\\JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Jogo_Xadrez\\Dama.cs",
+              "RelativeToolTip": "JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Jogo_Xadrez\\Dama.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAawE0AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T15:42:47.242Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Bispo.cs",
+              "DocumentMoniker": "C:\\Users\\joaog\\source\\repos\\Curso C#\\C\u00F3digos\\Projeto Jogo De Xadrez\\JogoXadrez\\JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Jogo_Xadrez\\Bispo.cs",
+              "RelativeDocumentMoniker": "JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Jogo_Xadrez\\Bispo.cs",
+              "ToolTip": "C:\\Users\\joaog\\source\\repos\\Curso C#\\C\u00F3digos\\Projeto Jogo De Xadrez\\JogoXadrez\\JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Jogo_Xadrez\\Bispo.cs",
+              "RelativeToolTip": "JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Jogo_Xadrez\\Bispo.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAawFIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T15:41:33.343Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Peao.cs",
+              "DocumentMoniker": "C:\\Users\\joaog\\source\\repos\\Curso C#\\C\u00F3digos\\Projeto Jogo De Xadrez\\JogoXadrez\\JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Jogo_Xadrez\\Peao.cs",
+              "RelativeDocumentMoniker": "JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Jogo_Xadrez\\Peao.cs",
+              "ToolTip": "C:\\Users\\joaog\\source\\repos\\Curso C#\\C\u00F3digos\\Projeto Jogo De Xadrez\\JogoXadrez\\JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Jogo_Xadrez\\Peao.cs",
+              "RelativeToolTip": "JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Jogo_Xadrez\\Peao.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T21:22:00.715Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Posicao.cs",
+              "DocumentMoniker": "C:\\Users\\joaog\\source\\repos\\Curso C#\\C\u00F3digos\\Projeto Jogo De Xadrez\\JogoXadrez\\JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Tabuleiro\\Posicao.cs",
+              "RelativeDocumentMoniker": "JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Tabuleiro\\Posicao.cs",
+              "ToolTip": "C:\\Users\\joaog\\source\\repos\\Curso C#\\C\u00F3digos\\Projeto Jogo De Xadrez\\JogoXadrez\\JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Tabuleiro\\Posicao.cs",
+              "RelativeToolTip": "JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Tabuleiro\\Posicao.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T21:08:10.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Tabuleiro.cs",
+              "DocumentMoniker": "C:\\Users\\joaog\\source\\repos\\Curso C#\\C\u00F3digos\\Projeto Jogo De Xadrez\\JogoXadrez\\JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Tabuleiro\\Tabuleiro.cs",
+              "RelativeDocumentMoniker": "JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Tabuleiro\\Tabuleiro.cs",
+              "ToolTip": "C:\\Users\\joaog\\source\\repos\\Curso C#\\C\u00F3digos\\Projeto Jogo De Xadrez\\JogoXadrez\\JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Tabuleiro\\Tabuleiro.cs",
+              "RelativeToolTip": "JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Tabuleiro\\Tabuleiro.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAIAwwCQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T21:28:55.086Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\joaog\\source\\repos\\Curso C#\\C\u00F3digos\\Projeto Jogo De Xadrez\\JogoXadrez\\JogoXadrez\\Program.cs",
+              "RelativeDocumentMoniker": "JogoXadrez\\Program.cs",
+              "ToolTip": "C:\\Users\\joaog\\source\\repos\\Curso C#\\C\u00F3digos\\Projeto Jogo De Xadrez\\JogoXadrez\\JogoXadrez\\Program.cs",
+              "RelativeToolTip": "JogoXadrez\\Program.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAawDIAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T21:27:49.787Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Cavalo.cs",
+              "DocumentMoniker": "C:\\Users\\joaog\\source\\repos\\Curso C#\\C\u00F3digos\\Projeto Jogo De Xadrez\\JogoXadrez\\JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Jogo_Xadrez\\Cavalo.cs",
+              "RelativeDocumentMoniker": "JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Jogo_Xadrez\\Cavalo.cs",
+              "ToolTip": "C:\\Users\\joaog\\source\\repos\\Curso C#\\C\u00F3digos\\Projeto Jogo De Xadrez\\JogoXadrez\\JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Jogo_Xadrez\\Cavalo.cs",
+              "RelativeToolTip": "JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Jogo_Xadrez\\Cavalo.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAqwFoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T15:39:55.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Rei.cs",
+              "DocumentMoniker": "C:\\Users\\joaog\\source\\repos\\Curso C#\\C\u00F3digos\\Projeto Jogo De Xadrez\\JogoXadrez\\JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Jogo_Xadrez\\Rei.cs",
+              "RelativeDocumentMoniker": "JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Jogo_Xadrez\\Rei.cs",
+              "ToolTip": "C:\\Users\\joaog\\source\\repos\\Curso C#\\C\u00F3digos\\Projeto Jogo De Xadrez\\JogoXadrez\\JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Jogo_Xadrez\\Rei.cs",
+              "RelativeToolTip": "JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Jogo_Xadrez\\Rei.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T20:04:55.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Peca.cs",
+              "DocumentMoniker": "C:\\Users\\joaog\\source\\repos\\Curso C#\\C\u00F3digos\\Projeto Jogo De Xadrez\\JogoXadrez\\JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Tabuleiro\\Peca.cs",
+              "RelativeDocumentMoniker": "JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Tabuleiro\\Peca.cs",
+              "ToolTip": "C:\\Users\\joaog\\source\\repos\\Curso C#\\C\u00F3digos\\Projeto Jogo De Xadrez\\JogoXadrez\\JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Tabuleiro\\Peca.cs",
+              "RelativeToolTip": "JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Tabuleiro\\Peca.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowCsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T21:22:50.12Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PosicaoXadrez.cs",
+              "DocumentMoniker": "C:\\Users\\joaog\\source\\repos\\Curso C#\\C\u00F3digos\\Projeto Jogo De Xadrez\\JogoXadrez\\JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Jogo_Xadrez\\PosicaoXadrez.cs",
+              "RelativeDocumentMoniker": "JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Jogo_Xadrez\\PosicaoXadrez.cs",
+              "ToolTip": "C:\\Users\\joaog\\source\\repos\\Curso C#\\C\u00F3digos\\Projeto Jogo De Xadrez\\JogoXadrez\\JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Jogo_Xadrez\\PosicaoXadrez.cs",
+              "RelativeToolTip": "JogoXadrez\\Entities\\Elementos_Jogo\\Camada_Jogo_Xadrez\\PosicaoXadrez.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T16:44:10.987Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -103,7 +103,10 @@ namespace JogoXadrez.Entities.Elementos_Jogo.Camada_Jogo_Xadrez
             {
                 VuneravelEnPassant = null;
             }
-                return pecaCapturada;
+
+
+            
+            return pecaCapturada;
         }
 
         public void ValidarPosicaoOrigem(Posicao p)
@@ -147,8 +150,43 @@ namespace JogoXadrez.Entities.Elementos_Jogo.Camada_Jogo_Xadrez
                 dezfazMovimento(pecaPega, origem, destino);
                 throw (new JogadaException("Jogada Inválida! - Jogador em xeque !"));
             }
+            else if(testePromocao(Tab.indentificarPeca(destino)))
+            {
+                Peca peaoPromovido =Tab.retirarPeca(destino);
+                pecas.Remove(peaoPromovido);
+                Console.WriteLine("Para qual peça deseja promover o Peão : (D | C | B | T)");
+                char pecaDesejada = char.Parse(Console.ReadLine());
 
-            if(existeXeque(adversario(JogadorAtual)))
+                Peca novaPeca;
+
+                if(pecaDesejada == 'D' || pecaDesejada == 'd')
+                {
+                    novaPeca = new Dama(Tab, JogadorAtual);
+                }
+                else if (pecaDesejada == 'C' || pecaDesejada == 'c')
+                {
+                    novaPeca = new Cavalo(Tab, JogadorAtual);
+                }
+                else if (pecaDesejada == 'B' || pecaDesejada == 'B')
+                {
+                    novaPeca = new Bispo(Tab, JogadorAtual);
+                }
+                else if (pecaDesejada == 'T' || pecaDesejada == 'T')
+                {
+                    novaPeca = new Torre(Tab, JogadorAtual);
+                }
+                else
+                {
+                    throw new JogadaException("Peça Informada é ínválida !");
+                }
+
+                Tab.addPeca(novaPeca, destino);
+                pecas.Add(novaPeca);
+               
+
+            }
+
+            if (existeXeque(adversario(JogadorAtual)))
             {
                 if (xequeMate(PecasEmJogo(adversario(JogadorAtual))))
                 {
@@ -171,7 +209,7 @@ namespace JogoXadrez.Entities.Elementos_Jogo.Camada_Jogo_Xadrez
                 //2 - Passa o Turno
                 Turno++;
 
-                
+
                 mudarJogador();
             }
 
@@ -315,7 +353,7 @@ namespace JogoXadrez.Entities.Elementos_Jogo.Camada_Jogo_Xadrez
             colocarNovaPeca('h', 8, new Torre(Tab, Cor.Preto));
             colocarNovaPeca('a', 7, new Peao(Tab, Cor.Preto, this));
             colocarNovaPeca('b', 7, new Peao(Tab, Cor.Preto, this));
-            colocarNovaPeca('c', 4, new Peao(Tab, Cor.Preto, this));
+            colocarNovaPeca('c', 7, new Peao(Tab, Cor.Preto, this));
             colocarNovaPeca('d', 7, new Peao(Tab, Cor.Preto, this));
             colocarNovaPeca('e', 7, new Peao(Tab, Cor.Preto, this));
             colocarNovaPeca('f', 7, new Peao(Tab, Cor.Preto, this));
@@ -457,6 +495,30 @@ namespace JogoXadrez.Entities.Elementos_Jogo.Camada_Jogo_Xadrez
             }
             return true;
         }
+
+        //Teste Promoção
+        private bool testePromocao(Peca p)
+        {
+            if(p is Peao)
+            {
+                if(p.Cor == Cor.Branco)
+                {
+                    if(p.Posicao.Linha == 0)
+                    {
+                        return true;
+                    }
+                }
+                else
+                {
+                    if (p.Posicao.Linha == 7)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
 
         /*
         public bool existeXeque(Cor cor)

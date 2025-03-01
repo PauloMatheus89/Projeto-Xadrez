@@ -21,6 +21,8 @@ namespace JogoXadrez.Entities.Elementos_Jogo.Camada_Tabuleiro
         public Tabuleiro Tabuleiro { get; protected set; }
         //Toda a peça está em um tabuleiro
 
+        public bool Promovida { get; set; }
+
         public Peca(Tabuleiro tabuleiro, Cor cor)
         {
             Cor = cor;

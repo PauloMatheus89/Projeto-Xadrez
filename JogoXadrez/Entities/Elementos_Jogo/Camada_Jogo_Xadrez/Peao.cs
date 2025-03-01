@@ -16,6 +16,27 @@ namespace JogoXadrez.Entities.Elementos_Jogo.Camada_Jogo_Xadrez
             this.partida = partida;
         }
 
+        private bool testePassant(Posicao pos)
+        {
+            Peca p = Tabuleiro.indentificarPeca(pos);
+            if(Cor == Cor.Branco)
+            {
+                if(p is Peao && p.QtdMovimentos == 1 && p.Posicao.Linha ==3 && partida.VuneravelEnPassant == p)
+                {
+                    return true;
+                }
+            }
+            else
+            {
+                if (p is Peao && p.QtdMovimentos == 1 && p.Posicao.Linha == 4 && partida.VuneravelEnPassant == p)
+                {
+                    return true;
+                }
+            }
+            return false;
+            
+        }
+
         public override bool[,] movimentoPeca()
         {
             bool[,] mat = new bool[Tabuleiro.Linhas, Tabuleiro.Colunas];
@@ -100,9 +121,43 @@ namespace JogoXadrez.Entities.Elementos_Jogo.Camada_Jogo_Xadrez
                 {
                     mat[p.Linha, p.Coluna] = true;
                 }
+   
             }
 
-                return mat;
+            //En Passant
+            if (!partida.Xeque)
+            {
+                Posicao passEsq = new Posicao(Posicao.Linha, Posicao.Coluna - 1);
+                Posicao passDir = new Posicao(Posicao.Linha, Posicao.Coluna + 1);
+                if (Cor == Cor.Branco)
+                {
+                    //Esquerda
+                    if (Tabuleiro.verifyPosition(passEsq) && testePassant(passEsq))
+                    {
+                        mat[Posicao.Linha - 1, Posicao.Coluna - 1] = true;
+                    }
+                    //Direita
+                    if (Tabuleiro.verifyPosition(passDir) && testePassant(passDir))
+                    {
+                        mat[Posicao.Linha - 1, Posicao.Coluna + 1] = true;
+                    }
+                }
+                else
+                {
+                    //Esquerda
+                    if (Tabuleiro.verifyPosition(passEsq) && testePassant(passEsq))
+                    {
+                        mat[Posicao.Linha + 1, Posicao.Coluna - 1] = true;
+                    }
+                    //Direita
+                    if (Tabuleiro.verifyPosition(passDir) && testePassant(passDir))
+                    {
+                        mat[Posicao.Linha + 1, Posicao.Coluna + 1] = true;
+                    }
+                }
+            }
+
+            return mat;
 
 
         }

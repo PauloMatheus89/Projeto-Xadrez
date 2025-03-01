@@ -25,6 +25,8 @@ namespace JogoXadrez.Entities.Elementos_Jogo.Camada_Jogo_Xadrez
 
         private HashSet<Peca> pecasCapturadas;
 
+        public Peca VuneravelEnPassant { get; private set; }
+
         public bool Xeque { get; private set; }
 
         public PartidaXadrez()
@@ -75,7 +77,33 @@ namespace JogoXadrez.Entities.Elementos_Jogo.Camada_Jogo_Xadrez
                 t.incrementarMovimento();
                 Tab.addPeca(t, destinoTorre);
             }
-            return pecaCapturada;
+
+            //En Passant
+            if (p is Peao && (pecaCapturada == null && (destino.Linha != origem.Linha && destino.Coluna != origem.Coluna)))
+            {
+                if(p.Cor == Cor.Branco)
+                {
+                    Posicao PosicaoPeao = new Posicao(destino.Linha + 1, destino.Coluna);
+                    Peca peaoCapturado = Tab.retirarPeca(PosicaoPeao);
+                    capturarPeca(peaoCapturado);
+                    return peaoCapturado;
+                }
+                else
+                {
+                    Posicao PosicaoPeao = new Posicao(destino.Linha - 1, destino.Coluna);
+                    Peca peaoCapturado = Tab.retirarPeca(PosicaoPeao);
+                    capturarPeca(peaoCapturado);
+                    return peaoCapturado;
+                }
+                
+                VuneravelEnPassant = null;
+
+            }
+            else
+            {
+                VuneravelEnPassant = null;
+            }
+                return pecaCapturada;
         }
 
         public void ValidarPosicaoOrigem(Posicao p)
@@ -129,21 +157,31 @@ namespace JogoXadrez.Entities.Elementos_Jogo.Camada_Jogo_Xadrez
                 else
                 {
                     Xeque = true;
+                    //2 - Passa o Turno
+                    Turno++;
+
+                    // 3 - Troca - Jogador
+                    mudarJogador();
                 }
 
             }
             else
             {
                 Xeque = false;
+                //2 - Passa o Turno
+                Turno++;
+
+                
+                mudarJogador();
+            }
+
+            Peca testePeca = Tab.indentificarPeca(destino);
+            if(testePeca is Peao && (destino.Linha == origem.Linha + 2 || destino.Linha == origem.Linha - 2))
+            {
+                VuneravelEnPassant = testePeca;
             }
 
             
-
-            //2 - Passa o Turno
-            Turno++;
-
-            // 3 - Troca - Jogador
-            mudarJogador();
         }
 
 
@@ -184,7 +222,6 @@ namespace JogoXadrez.Entities.Elementos_Jogo.Camada_Jogo_Xadrez
                 Tab.addPeca(torre, origemTorre);
                 torre.decrementarMovimento();
             }
-            Tab.addPeca(p, origem);
 
             //Roque Grande
             if (p is Rei && destino.Coluna == origem.Coluna - 2)
@@ -195,7 +232,34 @@ namespace JogoXadrez.Entities.Elementos_Jogo.Camada_Jogo_Xadrez
                 Tab.addPeca(torre, origemTorre);
                 torre.decrementarMovimento();
             }
-            
+
+            //En Passant
+            if (p.Cor == Cor.Branco)
+            {
+                if (p is Peao && (destino.Linha != origem.Linha && destino.Coluna != destino.Coluna) && (pecaCapturada is Peao && pecaCapturada.Posicao.Linha == origem.Linha))
+                {
+                    Posicao PeaoPego = new Posicao(destino.Linha + 1, destino.Coluna);
+                    if (p.Cor == Cor.Branco)
+                    {
+                        Tab.addPeca(pecaCapturada, PeaoPego);
+                        pecasCapturadas.Remove(pecaCapturada);
+                    }
+                }
+            }
+            else
+            {
+                if (p is Peao && (destino.Linha != origem.Linha && destino.Coluna != destino.Coluna) && (pecaCapturada is Peao && pecaCapturada.Posicao.Linha == origem.Linha))
+                {
+                    Posicao PeaoPego = new Posicao(destino.Linha - 1, destino.Coluna);
+                    if (p.Cor == Cor.Branco)
+                    {
+                        Tab.addPeca(pecaCapturada, PeaoPego);
+                        pecasCapturadas.Remove(pecaCapturada);
+                    }
+                }
+            }
+
+
 
 
         }
@@ -251,15 +315,12 @@ namespace JogoXadrez.Entities.Elementos_Jogo.Camada_Jogo_Xadrez
             colocarNovaPeca('h', 8, new Torre(Tab, Cor.Preto));
             colocarNovaPeca('a', 7, new Peao(Tab, Cor.Preto, this));
             colocarNovaPeca('b', 7, new Peao(Tab, Cor.Preto, this));
-            colocarNovaPeca('c', 7, new Peao(Tab, Cor.Preto, this));
+            colocarNovaPeca('c', 4, new Peao(Tab, Cor.Preto, this));
             colocarNovaPeca('d', 7, new Peao(Tab, Cor.Preto, this));
             colocarNovaPeca('e', 7, new Peao(Tab, Cor.Preto, this));
             colocarNovaPeca('f', 7, new Peao(Tab, Cor.Preto, this));
             colocarNovaPeca('g', 7, new Peao(Tab, Cor.Preto, this));
             colocarNovaPeca('h', 7, new Peao(Tab, Cor.Preto, this));
-
-
-
         }
 
         public void capturarPeca(Peca p)
